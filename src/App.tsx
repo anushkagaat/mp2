@@ -4,6 +4,7 @@ import SearchPage from "./pages/SearchPage";
 import GalleryPage from "./pages/GalleryPage";
 import DetailPage from "./pages/DetailPage";
 import Navbar from "./components/Navbar";
+import "./App.css";
 
 function App() {
   return (
