@@ -1,0 +1,239 @@
+/* === General Layout === */
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* === Home Page Background === */
+.home-container {
+  background-image: url("pages/artbg.jpg");
+  background-size: cover;            /* fill entire area */
+  background-position: center;       /* center the image */
+  background-attachment: fixed;      /* parallax effect when scrolling */
+  background-repeat: no-repeat;
+  min-height: 100vh;                 /* full screen height */
+  width: 100%;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Optional: add a soft overlay for text readability */
+.home-overlay {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(3px);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 900px;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1.2rem;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #ffcb05;
+}
+
+/* === Search Page === */
+input[type="text"] {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  width: 60%;
+  max-width: 600px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: border 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  border-color: #ffcb05;
+}
+
+/* === Gallery Grid === */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 2rem 3rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* === Artwork Card === */
+.artwork-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.artwork-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.artwork-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.artwork-card h3 {
+  font-size: 1rem;
+  margin: 0.8rem 0 0.4rem;
+  color: #222;
+}
+
+.artwork-card p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+/* === Detail Page === */
+.detail-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  text-align: center;
+}
+
+.detail-container img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.detail-container h2 {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+.detail-container p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+button {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+/* === Filter and Sort Bar === */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem auto;
+}
+
+.filter-bar select {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.filter-bar select:hover {
+  border-color: #ffcb05;
+  transform: scale(1.03);
+}
+
+/* === Artwork Details Section === */
+.artwork-details {
+  margin-top: 1.5rem;
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.artwork-details p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.artwork-details strong {
+  color: #111;
+}
+
+/* === Clickable Type Blocks === */
+.type-block-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.type-block {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.type-block:hover {
+  transform: scale(1.05);
+  border-color: #ffcb05;
+  background-color: #fff9c4;
+}
+
+.active-type {
+  background-color: #ffcb05;
+  color: #222;
+  border-color: #ffcb05;
+  transform: scale(1.08);
+}
